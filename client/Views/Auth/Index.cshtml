@@ -3,3 +3,36 @@
     Layout = "~/Views/Shared/_LayoutWithoutNav.cshtml";
 }
 
+<div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed">
+    <div class="position-relative overflow-hidden radial-gradient min-vh-100 d-flex align-items-center justify-content-center">
+        <div class="d-flex align-items-center justify-content-center w-100">
+            <div class="row justify-content-center w-100">
+                <div class="col-md-8 col-lg-6 col-xxl-3">
+                    <div class="card mb-0">
+                        <div class="card-body">
+                            <a class="logo-img text-center d-block py-3 w-100">
+                                <h2 class="fw-bold text-primary">Sign In</h2>
+                            </a>
+                            <form  method="post">
+                                <div class="mb-3">
+                                    <label  class="form-label">Email</label>
+                                    <input type="email" class="form-control" aria-describedby="email">
+                                    <span class="text-danger"></span>
+                                </div>
+                                <div class="mb-4">
+                                    <label  class="form-label">Password</label>
+                                    <input  type="password" class="form-control">
+                                    <span  class="text-danager"></span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between mb-4">
+                                    <!--  <a class="text-primary fw-bold" href="./index.html">Forgot Password ?</a> -->
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
