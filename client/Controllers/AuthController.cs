@@ -13,4 +13,14 @@ public class AuthController : Controller
     {
         return View();
     }
+
+    [HttpPost]
+    public IActionResult Login(string? email, string? password)
+    {
+        if (ModelState.IsValid)
+        {
+            return RedirectToAction("Index", "Home");
+        }
+        return View();
+    }
 }
