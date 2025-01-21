@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using client.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace client.Controllers;
 
@@ -15,7 +16,7 @@ public class AuthController : Controller
     }
 
     [HttpPost]
-    public IActionResult Login(string? email, string? password)
+    public IActionResult Login(User model)
     {
         if (ModelState.IsValid)
         {

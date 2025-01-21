@@ -1,4 +1,5 @@
-﻿@{
+﻿@model client.Models.User;
+@{
     ViewData["Title"] = "Login";
     Layout = "~/Views/Shared/_LayoutWithoutNav.cshtml";
 }
@@ -13,12 +14,12 @@
                 <div class="card-body">
                     <form method="post" asp-controller="Auth" asp-action="Login">
                         <div class="form-group mb-3">
-                            <label for="Email">Username</label>
-                            <input type="text" class="form-control" id="Email" name="Email" required />
+                            <label asp-for="Email">Username</label>
+                            <input type="email" class="form-control" id="Email" asp-for="Email" required />
                         </div>
                         <div class="form-group mb-3">
-                            <label for="Email">Password</label>
-                            <input type="password" class="form-control" id="Password" name="password" required />
+                            <label asp-for="Password">Password</label>
+                            <input type="password" class="form-control" asp-for="Password" id="Password" name="password" required />
                         </div>
                         <div class="form-group mb-3">
                             <button type="submit" class="btn bg-primary btn-sm text-white">Login</button>
