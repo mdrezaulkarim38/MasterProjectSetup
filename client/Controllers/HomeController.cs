@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace client.Controllers;
 
-[Authorize]
+[Authorize(AuthenticationSchemes = "Cookies")]
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;

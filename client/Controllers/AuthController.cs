@@ -32,7 +32,7 @@ public class AuthController : Controller
         var client = new HttpClient(); // Create HttpClient
         var loginPayload = new { model.Email, model.Password };
         var jsonContent = new StringContent(JsonSerializer.Serialize(loginPayload), Encoding.UTF8, "application/json");
-        var response = await client.PostAsync("https://localhost:5035/api/Auth/login", jsonContent);
+        var response = await client.PostAsync("http://localhost:5035/api/Auth/login", jsonContent);
 
         if (response.IsSuccessStatusCode)
         {
